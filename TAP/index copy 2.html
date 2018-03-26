@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DemoUni</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+
+  header {
+    text-align: center;
+    color: #fff;
+    background: #9c2e38;
+
+    position: fixed;
+    width:100%;
+    z-index: 1;
+    height: 88%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  h3 {
+    left: 100%;
+  }
+
+
+  @font-face {
+    font-family: glacial-indifference;
+    src: url("GlacialIndifference-Regular.otf");
+  }
+  @font-face {
+    font-family: glacial-indifferenceB;
+    src: url("GlacialIndifference-Bold.otf");
+  }
+  @font-face {
+    font-family: glacial-indifferenceI;
+    src: url("GlacialIndifference-Italic.otf");
+  }
+
+  .content-wrapper{
+    background-color: white;
+    top: 87%;
+    min-height: 12%;
+    position:absolute;
+    z-index: 2;
+    width: 100%;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  header .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  header img {
+    display: block;
+    margin: 0 auto 20px;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: glacial-indifferenceB;
+    font-weight: bold;
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  header .intro-text .names {
+    display: block;
+    text-transform: uppercase;
+    font-family: glacial-indifferenceB;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  section {
+    padding: 75px 0;
+    width: 100%;
+    font-family: glacial-indifference;
+
+  }
+
+  .column {
+    float: left;
+    width: 14.5%;
+
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  .column2
+  {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+
+  }
+
+
+  section h2 {
+    margin: 0;
+    font-size: 3em;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  section h4 {
+    margin: 0;
+    font-family: glacial-indifferenceB;
+  }
+
+  hr.star-light,
+  hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    font-family: glacial-indifferenceI;
+
+  }
+
+  hr.star-lights,
+  hr.star-primarys {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    font-family: glacial-indifferenceI;
+
+  }
+
+
+  hr.star-light:after,
+  hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: glacial-indifferenceI;
+    font-size: 2em;
+  }
+
+  hr.star-light {
+    border-color: #fff;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  hr.star-light:after {
+    color: #fff;
+    background-color: #9c2e38;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  .box {
+    padding-left: 10px;
+  }
+
+  hr.star-primary {
+    border-color: #2c3e50;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  section.primary h2{
+    color: #2c3e50;
+    font-family: glacial-indifferenceB;
+
+  }
+
+  section.success{
+    background-color: #9c2e38;
+    color: #fff;
+    font-family: glacial-indifference;
+
+  }
+  .border {
+    border-radius: 12.5px;
+    width: 250px;
+    border: 100px #9c2e38;
+    padding-top:25px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    background:#9c2e38;
+    box-shadow:1px 1px 10px 1.5px #a8301a;
+  }
+
+  .border:hover {
+    box-shadow:1px 1px 10px 1.5px #a8301a;
+
+  }
+
+  .border3 {
+    border-radius: 12.5px;
+    width: 400px;
+    height: 515px;
+    border: 100px #9c2e38;
+    padding-top:10px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    display: block;
+    background:#9c2e38;
+    margin: auto;
+
+  }
+
+  .border3:hover {
+    box-shadow:1px 1px 10px 1.5px #a8301a;
+
+  }
+
+  .thumbnail:hover {
+    box-shadow:1px 1px 10px 1.5px #888888;
+
+  }
+
+}
+
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#"><img src="https://s3-eu-west-1.amazonaws.com/kaylandu/WebsitePhotos/DemoUniversity+(7).png" width="65" height="65">
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll">
+              <a href="#courses">Courses</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#research">About</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#accommodation">Accommodation</a>
+            </li>
+          </li>
+        </li>
+        <li class="page-scroll">
+          <a href="#open">Open Day</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#talk">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<header id="page-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="intro-text">
+          <span class="name">Welcome to Demo University</span>
+          <hr class="star-light">
+          <div class="row">
+
+            <iframe src="carousel.html" width="100%" height="450px" frameBorder="0"></iframe>
+
+            <hr class="star-light">
+            <span class="names">"Once you stop learning, you start dying"</span>
+            <span class="names">Albert Einstein</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <div class="content-wrapper">
+
+    <section class="primary" id="courses">
+      <h2 align="center">Courses</h2>
+      <hr align="left" class="star-primary">
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <br>
+            <br>
+            <form class="form-horizontal">
+                <div class="border">
+                  <div class="row">
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <select class="form-control" id="sel1">
+                          <option>Undergraduate</option>
+                          <option>Postgraduate Research</option>
+                          <option>Taught Master's</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input type="search" class="form-control" id="search" placeholder="Enter Keywords">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-3">
+                        <button type="submit" class="btn btn-default">Search</button>
+                      </div>
+                    </div>
+                    <div class="success">
+                      <br>
+                      <span style="color:white">
+                        <p>◊ <a href="#courses" style="color:white">Subjects A-Z</a></p>
+                        <p>◊ <a href="#courses" style="color:white">Undergraduate Study</a></p>
+                        <p>◊ <a href="#courses" style="color:white">Postgraduate Study</a></p>
+                        <p>◊ <a href="#courses" style="color:white">Short Courses</a></p>
+                        <p>◊ <a href="#courses" style="color:white">Online Study Options</a></p>
+                        <p>◊ <a href="#courses" style="color:white">Postgraduate Research</a></p>
+                      </div>
+                    </span>
+                  </div>
+            </form>
+          </div>
+        </div>
+
+          <div class="col-sm-9">
+              <div class="col-lg-12 text-center">
+                <h1><small>Speak to our student ambassadors about their experience studying at Demo University.</small></h1>
+
+                <script id="inzite-slider-widget-2511269094569" type="text/javascript">
+                (function (d) {
+                  var c = d.getElementById('inzite-slider-widget-2511269094569');
+                  var i = d.createElement('iframe');
+                  i.setAttribute('src', 'https://theaccessplatform.com/widgets/views?name=profileSlider&category=&maxExperts=20&orientation=h&company=59df2513286fdd00478b668e&showBio=true&showCategory=true&targetBlank=true&expertType=featured&userId=5877f672a13fb10022c5b16c&queryParams=utm_source%3DDemoUniversity%26utm_medium%3DWebsiteWidget%26utm_campaign%3DProfileScroller&btnColor=%239c2e38');
+                  i.setAttribute('frameborder', '0');
+                  var h = 450 + 0 - 0;
+                  i.setAttribute('style', 'width:100%;height:' + h + 'px;position:relative;z-index:1;');
+                  c.parentNode.insertBefore(i, c);
+                })(document);
+                </script>
+              </div>
+
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <section class="success" id="research">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-12 text-center">
+              <h2>About</h2>
+              <hr class="star-light">
+            </div>
+            <div class="col-lg-6">
+              <p>Our mission is clear: to become one of the UK's leading universities for in-depth industry engagement. Our academic schools are united by our mantra "designed, developed and delivered by industry," and we ensure our students graduate industry ready, as their career starts from day one.</p>
+              <p>Our students get to make beautiful things, develop a craft and have an extraordinary experience alongside their academic studies, so they don’t just graduate with a degree, they also leave with an awesome portfolio to boot.</p>
+              <p>When you combine higher education and industry, everyone benefits. Especially when there's a need for graduates to stand out from the crowd in a competitive market.</p>
+            </div>
+            <div class="col-lg-6">
+              <p>Our students are taught by experts that have all worked in their respective industries and they’re mentored by leaders for industry too. They get to deliver on live industry briefs and attend industry workshops led by some of the world's most reputable organisations.</p>
+              <p>We offer all full-time degree students guaranteed internships*, so they gain experience during their studies. Our degree apprentices also get to work within a company throughout their studies, so they gain valuable experience, learning on the job.</p>
+              <p>Industry engagement drives us: it’s not just what we do, it’s who we are. And it is what will take us, and our students, into the future.</p>
+
+            </div>
+            <div class="col-lg-12 text-center">
+              <h2>Research</h2>
+              <hr class="star-light">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <h3 align="center">Physical Physics</h3>
+              <div class="thumbnail">
+                <img src="https://s3-eu-west-1.amazonaws.com/kaylandu/quantum.jpg" alt="Fjords" style="width:400px" style="height:400px">
+                <div class="caption">
+                  <p align="center">We break out of the lab to think outside of the box. Our scientists travel the world in pursuit of their research.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h3 align="center">Smart Cities</h3>
+            <div class="thumbnail">
+              <img src="Img/urban.jpg" alt="Lights" style="width:400px" style="height:400px">
+              <div class="caption">
+                <p align="center">We believe in a better future and it's our mission to create it through leading research into Smart Cities and Urban Agriculture.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 align="center">Social Sciences</h3>
+          <div class="thumbnail">
+            <img src="Img/science.jpg" alt="Nature" style="width:400px" style="height:400px">
+            <div class="caption">
+              <p align="center">We conduct pioneering research to explore the mind and our deepest motivations.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="primary" id="accommodation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Accommodation</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h3 align="center">Osprey House</h3>
+        <div class="thumbnail">
+          <img src="Img/house1.jpg" alt="Fjords" style="height:275px">
+          <div class="caption">
+            <p><img src="Img/favicon.ico" style="width:17.5px" style="height:20px"> Osprey House, DU Halls of Residence, London.</p>
+            <p><img src="Img/favicon3.ico" style="width:17.5px" style="height:20px"> Standard Single</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 align="center">Brompton House</h3>
+      <div class="thumbnail">
+        <img src="Img/house4.jpg" alt="Lights" style="height:275px">
+        <div class="caption">
+          <p><img src="Img/favicon.ico" style="width:17.5px" style="height:20px"> Brompton House, DU Halls of Residence, London.</p>
+          <p><img src="Img/favicon3.ico" style="width:17.5px" style="height:20px"> Standard Signle En-Suite</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h3 align="center">Abbey House</h3>
+    <div class="thumbnail">
+      <img src="Img/house3.jpg" alt="Nature" style="height:275px">
+      <div class="caption">
+        <p><img src="Img/favicon.ico" style="width:17.5px" style="height:20px"> Abbey House, DU Halls of Residence, London.</p>
+        <p><img src="Img/favicon3.ico" style="width:17.5px" style="height:20px"> Standard Double En-Suite</p>
+      </div>
+    </a>
+  </div>
+  <br>
+
+</div>
+<br>
+<br>
+
+
+<h1 align="center">Find out what our students think about their accommodation and ask them questions if you want to know more.</h1>
+<br>
+
+
+<script type="text/javascript" src="https://theaccessplatform.com/bower_components/iframe-resizer/js/iframeResizer.min.js"></script>
+<script id="inzite-answers-ask-widget-1511265949785" type="text/javascript">
+(function (d) {
+  var c = d.getElementById('inzite-answers-ask-widget-1511265949785');
+  var i = d.createElement('iframe');
+  var n = 'inzite-iframe-answers-widget-1511265949785';
+  i.setAttribute('src', 'https://theaccessplatform.com/widgets/views?name=answersAsk&category=59ad18726a471700457cd8ba&allQuestions=true&company=59df2513286fdd00478b668e&accommodateAnswers=false&showAnswersPanel=true&showCategory=false&showDetails=false&targetBlank=true&showAskPanel=true&queryParams=utm_source%3DDemoUniversity%26utm_medium%3DWebsiteWidget%26utm_campaign%3DAccommodationPage&btnColor=%239c2e38');
+  i.setAttribute('scrolling', 'no');
+  i.setAttribute('frameborder', '0');
+  i.setAttribute('id', n);
+  i.setAttribute('style', 'width:1px;min-width:100%;position:relative;z-index:1000;');
+  c.parentNode.insertBefore(i, c);
+  iFrameResize({checkOrigin: false, resizedCallback: isLoaded}, '#' + n);
+  ch();
+  window.addEventListener('resize', ch);
+  function ch() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    i.style.height = (640 - 0) + 'px';
+  }
+  function isLoaded() {
+    window.removeEventListener('resize', ch);
+  }
+})(document);
+</script>
+
+</div>
+</div>
+</section>
+
+<section class="success" id="history">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Study History</h2>
+        <hr class="star-light">
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="column2">
+        <div class="box">
+          <h4>Who's it for? </h4>
+          <p> History involves studying events and people from the past to give us a better understanding of the future. Courses can include ancient to modern day history, and from local to global. You'll learn research skills, how to evaluate archive and source materials and to write clearly. This is a versatile degree with graduates going into politics, law, business, accountancy, international development or further study for careers in the culture or heritage industries, including museums, art galleries and libraries. </p>
+          <br>
+          <h4>Course Structure</h4>
+          <p align= "left"> As a subject, history is not only about memorising facts, but also interpreting information to understand its overall impact. As such, as well as attending lectures you will also be required to go along to seminars and tutorials to engage in discussion with staff members and peers. Your analytical skills will then be honed through the submission of written essays and, in your final year, an in-depth dissertation that focuses on one particular area. </p>
+
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="box">
+
+          <script id="inzite-slider-widget-1511266026824" type="text/javascript">
+          (function (d) {
+            var c = d.getElementById('inzite-slider-widget-1511266026824');
+            var i = d.createElement('iframe');
+            i.setAttribute('src', 'https://theaccessplatform.com/widgets/views?name=profileSlider&category=587a73146bdc4c0020f0b744&maxExperts=10&orientation=h&company=59df2513286fdd00478b668e&randomExperts=true&showBio=false&showCategory=true&targetBlank=true&expertType=latest&userId=5877f672a13fb10022c5b16c&btnColor=%239c2e38');
+            i.setAttribute('frameborder', '0');
+            var h = 460 - 110 - 0;
+            i.setAttribute('style', 'width:100%;height:310px;position:relative;z-index:1;');
+            c.parentNode.insertBefore(i, c);
+          })(document);
+          </script>
+        </div>
+        <h3 align="center"><span class=""><i>Hear from our History Student <br> ambassadors about their experiences.</i></span></h3>
+
+      </div>
+
+      <div class="column2">
+        <div class="box">
+          <h4>Key Information</h4>
+          <p align= "left">Start Date: September 2018<br>Duration: 3 Years</p>
+          <h4>Entry Requirements</h4>
+          <p>AAB to ABB including History or a related subject*.
+            Applicants taking the Extended Project Qualification (EPQ) will also be made an alternative offer one grade below the standard offer, conditional on an A grade in the EPQ.
+            We accept all A levels except General Studies.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="primary" id="open">
+    <div class="container">
+
+      <div class="col-sm-5">
+
+        <h2 align="center">Open Day</h2>
+        <hr align="left" class="star-primary">
+        <p align="center"><b>It’s a great chance to find out about student life at DU from the people who know it best: our students and staff.</b></p>
+        <p align="center"><b>You can also explore the campus, learn more about the range of degrees available and ask questions about admissions, accommodation and job prospects.</b></p>
+        <br>
+
+
+        <h3 align="center">Upcoming Events</h2>
+          <hr align="center" width="475px">
+          <div class="col-sm-6">
+            <h5 align="center">Postgraduate Wednesday 21 March 2018</h5>
+          </div>
+          <div class="col-sm-6">
+
+            <h5 align="center">4pm-7pm</h5>
+          </div>
+          <br>
+          <br>
+          <hr align="center" width="475px">
+
+          <div class="col-sm-6">
+            <h5 align="center">Undergraduate Saturday 16 June 2018</h5>
+          </div>
+          <div class="col-sm-6">
+
+            <h5 align="center">10am-3pm</h5>
+          </div>
+          <br>
+          <br>
+          <hr align="left" width="475px">
+
+        </div>
+
+        <div class="col-sm-7">
+          <div class="col-lg-12 text-center">
+            <h2 align="center">Talk To Us</h2>
+            <hr class="star-primary">
+
+            <h3 align="center">Speak to our students to find out more about academic and student life at Demo University.</h3>
+
+
+
+            <script id="inzite-slider-widget-1511269094569" type="text/javascript">
+            (function (d) {
+              var c = d.getElementById('inzite-slider-widget-1511269094569');
+              var i = d.createElement('iframe');
+              i.setAttribute('src', 'https://theaccessplatform.com/widgets/views?name=profileSlider&category=&maxExperts=20&orientation=h&company=59df2513286fdd00478b668e&showBio=true&showCategory=true&targetBlank=true&expertType=featured&userId=5877f672a13fb10022c5b16c&queryParams=utm_source%3DDemoUniversity%26utm_medium%3DWebsiteWidget%26utm_campaign%3DProfileScroller&btnColor=%239c2e38');
+              i.setAttribute('frameborder', '0');
+              var h = 450 + 0 - 0;
+              i.setAttribute('style', 'width:650px;height:' + h + 'px;position:relative;z-index:1;');
+              c.parentNode.insertBefore(i, c);
+            })(document);
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success" id="talk">
+      <div class="container">
+        <div class="row">
+          <h2 align="center">Student Blog</h2>
+          <hr class="star-light">
+          <div class="col-sm-4">
+            <br>
+            <h4 align="left">Let's chat if you want to find out more!</h4>
+            <br>
+
+            <script id="inzite-card-widget-1" type="text/javascript">
+            (function (d) {
+              var c = d.getElementById('inzite-card-widget-1');
+              var i = d.createElement('iframe');
+              i.setAttribute('src', 'https://theaccessplatform.com/widgets/views?name=profileCard&expertUrl=59e649dda9c7e20044a5aa7d&targetBlank=true');
+              i.setAttribute('frameborder', '0');
+              var w = '300px';
+              i.setAttribute('style', 'width:' + w + ';height:395px;position:relative;z-index:1;');
+              c.parentNode.insertBefore(i, c);
+            })(document);
+            </script>
+
+
+          </div>
+          <div class="col-sm-8">
+            <h3><b>Student Jobs</b></h3>
+            <p align="left">Whilst no one expects living on a student budget to be an easy ride, shockingly 80% of university students worry about not having enough money each day which has proven be a factor that leads to lower student grades.</p>
+            <p align="left">Make sure your CV is up-to-date (including updated contact details and correct spellings). With a massive 59% of recruiters rejecting a candidate due to poor spelling and grammar, ensuring that your grammar is correct should be your biggest concern. Whilst these mistakes could be small, recruiters see this as sloppy and shows the lack of time spent on your CV.</p>
+            <p align="left">Local pubs, restaurants, and hotels often need staff to work lots of flexible hours if you want some extra cash, however applying to summer internships is the ideal way to build career experience. You’re best option is to talk to family and friends or apply through job websites, unfortunately summer internships are often unpaid however they offer long term benefits that part time bar work could not.</p>
+            <p align="left">Applying for jobs early, ensuring your CV is up to scratch, and figuring out exactly what you want to achieve are the three main tips that should allow you to easily find summer jobs. If you are turned away don’t be disheartened! It often takes many applications before you are chosen, that’s just part of the job hunting process!</p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+  <footer class="container" style="min-height:200px; font-family: glacial-indifference; background-color:#ffffff;color:#000000;text-align:center;padding-top:50px;">
+    <p>© TheAccessPlatform Ltd 2018</p>
+    <br>
+
+    <a href="https://www.facebook.com/theaccessplatform">
+      <img src="Img/facebook (1).png" width="30px" height="30px">
+    </a>
+
+    <a href="https://twitter.com/TAPlatform">
+      <img src="Img/twitter (1).png" width="30px" height="30px">
+    </a>
+
+    <a href="https://www.linkedin.com/company/the-access-platform/">
+      <img src="Img/linkedin (1).png" width="30px" height="30px">
+    </a>
+    <br>
+    <br>
+    <p>Kaylan Barge</p>
+
+  </footer>
+</div>
+
+
+</body>
+</html>
